@@ -1,0 +1,256 @@
+/*Main Page*/
+#mainPage{
+    width: 80%;
+    margin: auto;
+}
+
+#pageTitle, #pageFooter{
+    background-color: #17252A;
+    display: flex;
+    flex-wrap: wrap;
+    color: #86C232;
+    font-family: 'Goldman', cursive;
+
+}
+ #pageTitle{
+    height: 150px;
+    margin-bottom: 20px;
+    font-size: 4rem;
+ }
+
+#pageFooter{
+    height: 60px;
+    margin-top: 20px;
+}
+
+.mainTitle, .footer{
+    text-align: center;
+    margin: auto;
+}
+
+.theFullBoard{
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+/*Vertiacal Scores*/
+.col-11 .row .scoreTitle{
+    padding-top: 5px;
+}
+
+/*Both Team Names*/
+#team1Name, #team2Name{
+    border-style: solid;
+    border-width: 3px;
+    font-size: 50px;;
+}
+
+/*Home Team*/
+#team1Name{
+    height: 110px;
+    margin-left: 9.090909091%;
+    display:block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*Home Team Img*/
+#team1Name img{
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+/*Vis Team Img*/
+#team2Name img{
+    height: 70px;
+    -webkit-transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-right: 15px;
+}
+
+/*Visitor Team*/
+#team2Name{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: 190px;
+    display:block;
+    text-align: center;
+}
+
+/*Single Box Size on Main Board*/
+.oneBox{
+    flex: 0 0 9.090909091%;
+    max-width: 9.090909091%;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oneBoxShift{
+    margin-left: 9.090909091%;
+}
+
+.scoreTitle{
+    font-size: 35px;
+    border-width: 0;
+    border: 1px solid #86C232;
+    background-color: #17252A;
+    color: #DEF2F1;
+    padding-top: 5px;
+    
+}
+
+.boxEmpty{
+    font-size: 15px;
+    color: #2B7A78;
+    background-color: #DEF2F1;
+    border: 1px solid #2B7A78;
+}
+
+.boxTaken{
+    -moz-box-shadow:    inset 0 0 7px #86C232;
+    -webkit-box-shadow: inset 0 0 7px #86C232;
+    box-shadow:         inset 0 0 7px #86C232;
+    background-color: #2B7A78;
+    color: #FEFFFF;
+    border: 1px solid #2B7A78;
+    font-size: 1.3rem;
+    font-weight: 100;
+    font-family: 'Neucha', cursive;
+}
+
+.gameinfo{
+    padding-left: 20px;
+    font-family: 'Oswald', sans-serif;
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+
+}
+
+.infoMainTitle{
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 1.4rem;
+    background-color: #17252A;
+    color: #FEFFFF;
+}
+
+.infoTitle{
+    background-color: #DEF2F1;
+    padding-left:5px;
+    font-size: 1.25rem;
+}
+
+.infoSubtitle{
+    padding-left: 15px;
+    background: #FEFFFF;
+    font-size: 1.15rem;
+}
+
+.infoText{
+    background: #FEFFFF;
+    font-size: 1.05rem;
+}
+
+#Sq1Price, #Sq3Price, #q1Pay, #q2Pay, #q3Pay, #q4Pay{
+    font-weight:600;
+    font-size: 1.10rem;
+}
+
+
+
+#game-info, #admin-info, #box-info{
+    border: 1px solid #17252A;
+    margin-bottom: 30px;
+}
+
+.inputemail{
+    margin-left: 15px;
+    width: 90%;
+}
+
+#inputemailmessage{
+    text-align:justify;
+    font-size: 0.9rem;
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.radiobtn{
+    font-size: 1.2rem;
+    margin-left: 13px;
+    margin-bottom: 10px
+}
+
+.boxNum{
+    text-align: right;
+    margin-right: 5px;
+}
+
+#box1Num, #box2Num, #box3Num{
+    width: 85%;
+    height: 28px;
+    background-color: #DEF2F1;
+    border-radius: 5px;
+}
+
+.freeBoxOption{
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+.getSubtitle{
+    margin-top: 12px;
+}
+
+.theBtn{
+    text-align: right;
+}
+
+.subBtn{
+    background-color: #17252A;
+    color:#FEFFFF;
+    border-color: #86C232;
+    border-radius: 8px;
+    padding: 7px 14px 7px 14px; 
+    margin: 5px auto 10px auto;
+}
+
+/*MEDIA STYLE*/
+
+@media screen and (max-width: 1880px){
+    #mainPage{width: 90%;}
+}
+
+@media screen and (max-width: 1580px){
+    .boxTaken{font-size: 1.1rem;}
+    .radiobtn{font-size: 1rem;}
+}
+
+@media screen and (max-width: 1380px){
+    .boxTaken{font-size: .9rem;}
+    .radiobtn{font-size: .8rem;}
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 576px){
+
+}
+

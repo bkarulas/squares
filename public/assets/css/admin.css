@@ -1,0 +1,70 @@
+#allGames{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#fillTheBoard{
+    width: 60%;
+    margin: auto;
+}
+
+#adminPlayers{
+    width: 60%;
+    margin:auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#createPlayer{
+    width: 60%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#newPlayer{
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+#editPlayer{
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+.boardTitle{
+    border: 1px solid #000000;
+    padding-left: 5px;
+}
+
+.boardInfo{
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    padding-left: 5px;
+}
+
+.center{
+    text-align: center;
+}
+
+.btn{
+    margin: auto;
+    width: 100px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.defaultBox{
+    background-color:#ffffd4;
+    width: 90%;
+    margin: 3px;
+}
+
+.displayBox{
+    width: 90%;
+}

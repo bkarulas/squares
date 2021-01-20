@@ -1,0 +1,175 @@
+/* Colours taken from:
+https://www.codeofcolors.com/nfl-team-colors.html */
+
+
+/* PLAYER CARDS */
+.ARI{
+  background-color: #97233F;
+  border-color:  #FFB612;
+  color: white;
+}
+.ATL{
+  background-color: #A71930;
+  border-color:  #A5ACAF;
+  color: white;
+}
+.BAL{
+  background-color: #241773;
+  border-color:  #9E7C0C;
+  color: white;
+}
+.BUF{
+  background-color: #ffffff;
+  border-color: #C60C30 ;
+  color: #00338D;
+}
+.CAR{
+  background-color: #0085CA;
+  border-color:  #BFC0BF;
+  color: white;
+}
+.CHI{
+  background-color: #00143F;
+  border-color:  #F26522;
+  color: white;
+}
+.CIN{
+  background-color: #FB4F14;
+  border-color:  #000000;
+  color: white;
+}
+.CIN{
+  background-color: #FB4F14;
+  border-color:  #000000;
+  color: white;
+}
+.CLE{
+  background-color: #FB4F14;
+  border-color:  #22150C;
+  color: white;
+}
+.DAL{
+  background-color: #0C264C;
+  border-color:  #B0B7BC;
+  color: white;
+}
+.DEN{
+  background-color: #002244;
+  border-color:  #FB4F14;
+  color: white;
+}
+.DET{
+  background-color: #046EB4;
+  border-color:  #B0B7BC;
+  color: white;
+}
+.GB{
+  background-color: #24423C;
+  border-color:  #FCBE14;
+  color: white;
+}
+.HOU{
+  background-color: #00143F;
+  border-color: #C9243F;
+  color: white;
+}
+.IND{
+  background-color: #FFFFFF;
+  border-color: #003D79;
+  color: #003D79;
+}
+.JAX{
+  background-color: #136677;
+  border-color: #D8A328;
+  color: white;
+}
+.KC{
+  background-color: #CA2430;
+  border-color: #FFB612;
+  color: white;
+}
+.KC{
+  background-color: #CA2430;
+  border-color: #FFB612;
+  color: white;
+}
+.LAR{
+  background-color: #002147;
+  border-color: #95774C;
+  color: white;
+}
+.LAC{
+  background-color: #0A2342;
+  border-color: #FDB515;
+  color: white;
+}
+.MIA{
+  background-color: #0091A0;
+  border-color: #FF8500;
+  color: white;
+}
+.MIN{
+  background-color: #4F2E84;
+  border-color: #FEC62F;
+  color: white;
+}
+.NE{
+  background-color: #0A2342;
+  border-color: #C81F32 ;
+  color: white;
+}
+.NO{
+  background-color: #A08A58;
+  border-color: #000000 ;
+  color: white;
+}
+.NYG{
+  background-color: #192E6C;
+  border-color: #B20032 ;
+  color: white;
+}
+.NYJ{
+  background-color: #203731;
+  border-color: #FFFFFF ;
+  color: white;
+}
+.OAK{
+  background-color: #C4C9CC;
+  border-color: #000000;
+  color: white;
+}
+.PHI{
+  background-color: #014A53;
+  border-color: #BBC4C9;
+  color: white;
+}
+.PIT{
+  background-color: #FFC20E;
+  border-color: #000000;
+  color: white;
+}
+.SF{
+  background-color: #C9243F;
+  border-color: #C8AA76;
+  color: white;
+}
+.SEA{
+  background-color: #002A5C;
+  border-color: #7AC142;
+  color: white;
+}
+.TB{
+  background-color: #D40909;
+  border-color: #B0B9BF;
+  color: white;
+}
+.TEN{
+  background-color: #00295B;
+  border-color: #4095D1;
+  color: white;
+}
+.WAS{
+  background-color: #7C1415;
+  border-color: #FFC20F;
+  color: white;
+}
