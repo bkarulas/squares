@@ -26,6 +26,13 @@ function getGameTime(dateTime){
     return (`${time[0]}:${time[1]} ${time[3]}`);
 }
 
+function getGameTimeShort(dateTime){
+    let time = (dateTime.split(" ").pop()).split(':');
+    time.push('pm');
+    (parseInt(time[0])>12) ? time[0] = time[0]-12 : time[3] = 'am';
+    return (`${time[0]}:${time[1]}`);
+}
+
 function getUrlVar(winLocaation, id){
     let url_string = winLocaation;
     let url = new URL(url_string);

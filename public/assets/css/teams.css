@@ -3,6 +3,16 @@ https://www.codeofcolors.com/nfl-team-colors.html */
 
 
 /* PLAYER CARDS */
+.AFC{
+  background-color: #D50A0A;
+  border-color:  #013369;
+  color: white;
+}
+.NFC{
+  background-color: #013369;
+  border-color:  #D50A0A;
+  color: white;
+}
 .ARI{
   background-color: #97233F;
   border-color:  #FFB612;
@@ -19,9 +29,9 @@ https://www.codeofcolors.com/nfl-team-colors.html */
   color: white;
 }
 .BUF{
-  background-color: #ffffff;
+  background-color: #00338D;
   border-color: #C60C30 ;
-  color: #00338D;
+  color: #ffffff;
 }
 .CAR{
   background-color: #0085CA;

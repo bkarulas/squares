@@ -4,13 +4,22 @@ INSERT INTO `admin` (name_first, name_last, phone, email, `password`) VALUES
 ('Ken', 'Karulas', '416-877-9111', 'kkarulas@hotmail.com', 'TheBeach'); 
 
 INSERT INTO game (team_1, team_2, game_time) VALUES
-(3, 2, '2021-02-07 18:30:00'); 
+(3, 2, '2021-02-07 18:30:00'),
+(15, 7, '2021-02-07 18:30:00'),
+(15, 19, '2021-02-07 18:30:00'),
+(33, 7, '2021-02-07 18:30:00'),
+(33, 19, '2021-02-07 18:30:00');
 
 
 INSERT INTO board (admin_id, game_id, cost_1sq, cost_3sq, pay_q1, pay_q2, pay_q3, pay_q4) VALUES
 (1,1,5,10,10,30,10,50),
 (2,1,10,0,10,30,10,50),
-(3,1,5,0,10,30,10,50);
+(3,1,5,0,10,30,10,50),
+(1,2,5,10,10,30,10,50),
+(1,3,5,10,10,30,10,50),
+(1,4,5,10,10,30,10,50),
+(1,5,5,10,10,30,10,50);
+
 
 INSERT INTO player (admin_id, name_first, name_last, email, phone) VALUES
 (1, 'Brad', 'Karulas', 'bkarulas@gmail.com', '416-887-3545'),

@@ -18,6 +18,21 @@
     font-size: 4rem;
  }
 
+ #pageTitle button{
+     font-size: 1rem;
+     height: 35px;
+     padding: 4px 8px 4px 8px;
+     border-radius: 5px;
+     margin-left: 83%;
+     font-family: 'Oswald', sans-serif;
+     background-color: #DEF2F1;
+     border: 1px solid #86C232;
+     color: #17252A
+     -moz-box-shadow:    inset 0 0 3px #86C232;
+     -webkit-box-shadow: inset 0 0 3px #86C232;
+     box-shadow:         inset 0 0 3px #86C232;
+ }
+
 #pageFooter{
     height: 60px;
     margin-top: 20px;
@@ -46,6 +61,12 @@
     font-size: 50px;;
 }
 
+#team1SmName, #team2SmName{
+    border-style: solid;
+    border-width: 1px;
+    font-size: 30px;;
+}
+
 /*Home Team*/
 #team1Name{
     height: 110px;
@@ -55,15 +76,27 @@
     padding-top: 10px;
 }
 
+#team1SmName{
+    height: 50px;
+    margin-left: 9.090909091%;
+    display:block;
+    text-align: center;
+    padding-top: 5px;
+}
+
 /*Home Team Img*/
 #team1Name img{
     height: 70px;
     margin-bottom: 10px;
 }
 
+#team1SmName img{
+    height: 45px;
+}
+
 /*Vis Team Img*/
 #team2Name img{
-    height: 70px;
+    width: 70px;
     -webkit-transform:rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -72,13 +105,30 @@
     margin-right: 15px;
 }
 
+#team2SmName img{
+    width: 45px;
+    -webkit-transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+
 /*Visitor Team*/
-#team2Name{
+#team2Name, #team2SmName{
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    margin-top: 190px;
     display:block;
     text-align: center;
+}
+
+#team2Name{
+    margin-top: 190px;
+}
+#team2SmName{
+    margin-top: 130px;
 }
 
 /*Single Box Size on Main Board*/
@@ -98,19 +148,41 @@
 
 .scoreTitle{
     font-size: 35px;
-    border-width: 0;
-    border: 1px solid #86C232;
     background-color: #17252A;
     color: #DEF2F1;
     padding-top: 5px;
     
 }
 
+#team1score01{
+    border:1px solid #b9cac9;
+}
+
+#team1score02, #team1score03, #team1score04, #team1score05, #team1score06, #team1score07, #team1score08, #team1score09, #team1score10{
+    border-top: 1px solid #b9cac9;
+    border-right: 1px solid #b9cac9;
+    border-bottom: 1px solid #b9cac9;  
+}
+
+#team2score01{
+    border:1px solid #b9cac9;
+}
+
+#team2score02, #team2score03, #team2score04, #team2score05, #team2score06, #team2score07, #team2score08, #team2score09, #team2score10{
+    border-left: 1px solid #b9cac9;
+    border-right: 1px solid #b9cac9;
+    border-bottom: 1px solid #b9cac9;  
+}
+
+.boxTaken, .boxEmpty{
+    border-right: 1px solid #b9cac9;
+    border-bottom: 1px solid #b9cac9;   
+}
+
 .boxEmpty{
     font-size: 15px;
     color: #2B7A78;
     background-color: #DEF2F1;
-    border: 1px solid #2B7A78;
 }
 
 .boxTaken{
@@ -119,7 +191,6 @@
     box-shadow:         inset 0 0 7px #86C232;
     background-color: #2B7A78;
     color: #FEFFFF;
-    border: 1px solid #2B7A78;
     font-size: 1.3rem;
     font-weight: 100;
     font-family: 'Neucha', cursive;
@@ -127,11 +198,17 @@
 
 .gameinfo{
     padding-left: 20px;
-    font-family: 'Oswald', sans-serif;
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
+}
 
+#gameinfoSm, #gameinfoLg{
+    font-family: 'Oswald', sans-serif;
+}
+
+#gameinfoSm, #team1SmName, #team2SmName, #getBoxes, #getBoard{
+    display: none;
 }
 
 .infoMainTitle{
@@ -226,6 +303,18 @@
     margin: 5px auto 10px auto;
 }
 
+.centerText{
+    text-align: center;
+}
+
+.infoTitleSm{
+    background-color: #DEF2F1;
+}
+
+.infoTextSm{
+    font-size: 0.8rem;
+}
+
 /*MEDIA STYLE*/
 
 @media screen and (max-width: 1880px){
@@ -235,22 +324,184 @@
 @media screen and (max-width: 1580px){
     .boxTaken{font-size: 1.1rem;}
     .radiobtn{font-size: 1rem;}
+    #team1Name{
+        height: 80px;
+        padding-top: 5px;
+    }
+    #team2Name{
+        margin-top: 160px;
+    }
+    #team1Name, #team2Name{
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width: 1380px){
+    #mainPage{width: 97%;}
     .boxTaken{font-size: .9rem;}
-    .radiobtn{font-size: .8rem;}
+    #team1Name{height: 65px;}
+    #team2Name{margin-top: 125px;}
+    #team1Name, #team2Name{font-size: 25px;}
+    #team1Name img{height: 50px;}
+    #team2Name img{width: 50px;}
+    .oneBox{height: 60px;}
+    .gameinfo{padding-left: 7px;}
+    #game-info, #admin-info, #box-info{margin-bottom: 5px;}
+    .infoMainTitle{font-size: 1.1rem;}
+    .infoTitle{
+        font-size: .95rem;
+        padding-left: 2px;}
+    .infoSubtitle{
+        font-size: .91rem;
+        padding-left: 5px;}
+    .infoText{font-size: .8rem;}
+    #Sq1Price, #Sq3Price, #q1Pay, #q2Pay, #q3Pay, #q4Pay{
+        font-size: .91rem;
+        font-weight: 600;
+    }
+    .inputemail{
+        margin-left: 3px;
+        width: 97%;
+        font-size: .9rem;
+    }
+    #inputemailmessage{
+        font-size: .8rem;
+        margin: 3px 5px 3px 5px;
+    }
+    .radiobtn{
+        font-size: 1rem;
+        padding: 0px;
+        margin-left: 10px;}
+    .freeBoxOption {
+        font-size: .95rem;
+    }
+    .subBtn{
+        border-radius: 5px;
+        padding: 4px 8px 4px 8px;
+        font-size: .8rem;
+    }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1030px){
+    #gameinfoSm, #team1SmName, #team2SmName{display: block;}
+    #game-info,#admin-info, #team1Name, #team2Name{display: none;}
+    #gameinfoSm{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #gameinfoSm .col-2, #gameinfoSm .col-1{
+        text-align: left;
+    }
+    .theFullBoard {
+        -ms-flex: 0 0 97%;
+        flex: 0 0 97%;
+        max-width: 97%;
+    }
+    .gameinfo {
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
+        padding:0px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #gameinfoSm .col-2{
+        padding-left: 7px;
+    }
+
+    #team1SmName{height: 70px;}
+    #team2SmName{margin-top: 130px;}
+    #team1SmName, #team2SmName{font-size: 25px;}
+    #team1SmName img{height: 50px;}
+    #team2SmName img{width: 50px;}
+    .theFullBoard{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #getBoxes{
+        display: block;
+        font-size: 1rem;
+        height: 35px;
+        padding: 4px 8px 4px 8px;
+        border-radius: 5px;
+        margin-left: 83%;
+        font-family: 'Oswald', sans-serif;
+    }
+
+
+    .priceBorder {
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+    }
+
+
+    .oneBox{
+        height: 60px;
+        font-size: .75rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+    .scoreTitle{
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding-bottom: 3px;
+        border: ;
+    }
+    
+}
+
+@media screen and (max-width: 830px){
+    #pageTitle button{
+        font-size: .8rem;
+        margin-left: 78%;
+    }
+    .oneBox{
+        height: 45px;
+        font-size: .55rem;
+    }
+    #team1SmName{height: 50px;}
+    #team2SmName{margin-top: 95px;}
+    #team1SmName, #team2SmName{font-size: 20px;}
+    #team1SmName img{height: 32px;}
+    #team2SmName img{width: 35px;}
+    .boxTaken{
+        -moz-box-shadow:    inset 0 0 0px #86C232;
+        -webkit-box-shadow: inset 0 0 0px #86C232;
+        box-shadow:         inset 0 0 0px #86C232;
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 530px){
+    #pageTitle{
+        height: 100px;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+     }
+     #pageTitle button{
+        font-size: .8rem;
+        width: 60%;
+        height: 25px;
+        padding: 1px 2px 1px 2px;
+        margin:auto;
+    }
+    .infoMainTitle{font-size: .9rem;}
+    .infoTitleSm{font-size: .75rem;}
+    .infoTextSm{
+        font-size: 0.6rem;
+    }
 
-}
+    #team1SmName{height: 30px;}
+    #team2SmName{margin-top: 55px;}
+    #team1SmName, #team2SmName{font-size: 15px;}
+    #team1SmName img{height: 20px;}
+    #team2SmName img{width: 25px;}
 
-@media screen and (max-width: 576px){
-
+    .oneBox{
+        height: 25px;
+        font-size: .3rem;
+    }
+    
 }
 

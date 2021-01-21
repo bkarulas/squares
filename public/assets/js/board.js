@@ -6,7 +6,6 @@ getTakenSquares(boardId);
 chooseThreeBox();
 listFreeSquares();
 
-
 function submitTheBox(){
     let allBoxSelected = [];
     let email = document.getElementById('useremail').value;
@@ -140,24 +139,46 @@ function printTakenSquares(info){
 
 //BOARD INFO
 function printTheBoardInfo(info){
-    printTeamTitles(info.team1Full, info.team1Short, 1);
-    printTeamTitles(info.team2Full, info.team2Short, 2)
+    printTeamTitles(info.team1Full, info.team1Short, 'team1');
+    printTeamTitles(info.team2Full, info.team2Short, 'team2');
+    printTeamTitles(info.team1Name, info.team1Short, 'team1Sm');
+    printTeamTitles(info.team2Name, info.team2Short, 'team2Sm')
     document.getElementById('teamNames').innerText = `${info.team1Name} / ${info.team2Name}`;
+    document.getElementById('teamNamesSm').innerText = `${info.team1Short} / ${info.team2Short}`;
     document.getElementById('gameDate').innerText = getGameDate(info.gameTime);
+    document.getElementById('gameDateSm').innerText = getGameDateShort(info.gameTime);
     document.getElementById('gameTime').innerText = getGameTime(info.gameTime);
+    document.getElementById('gameTimeSm').innerText = getGameTimeShort(info.gameTime);
+    if (info.cost3Sq == 0){
+        document.getElementById('Sq1PriceSm').className = "col-12";
+        document.getElementById('Sq1displaySm').className = "col-12";
+        document.getElementById('Sq3display').style.display = "none";
+        document.getElementById('Sq3displaySm').style.display = "none";
+        document.getElementById('Sq3PriceSm').style.display = "none"
+    }else{
+        document.getElementById('Sq3Price').innerText = `: $${info.cost3Sq}.00`;
+        document.getElementById('Sq3PriceSm').innerText = `$${info.cost3Sq}.00`;
+    }
     document.getElementById('Sq1Price').innerText = `: $${info.cost1Sq}.00`;
-    (info.cost3Sq == 0) ? document.getElementById('Sq3display').style.display = "none" : document.getElementById('Sq3Price').innerText = `: $${info.cost3Sq}.00`;
+    document.getElementById('Sq1PriceSm').innerText = `$${info.cost1Sq}.00`;
     document.getElementById('q1Pay').innerText = `: ${info.payQ1}%`;
+    document.getElementById('q1PaySm').innerText = `${info.payQ1}%`;
     document.getElementById('q2Pay').innerText = `: ${info.payQ2}%`;
+    document.getElementById('q2PaySm').innerText = `${info.payQ2}%`;
     document.getElementById('q3Pay').innerText = `: ${info.payQ3}%`;
+    document.getElementById('q3PaySm').innerText = `${info.payQ3}%`;
     document.getElementById('q4Pay').innerText = `: ${info.payQ4}%`;
+    document.getElementById('q4PaySm').innerText = `${info.payQ4}%`;
     document.getElementById('adminName').innerText = `${info.adminFirst} ${info.adminLast}`;
+    //document.getElementById('adminNameSm').innerText = `${info.adminFirst} ${info.adminLast}`;
     document.getElementById('adminEmail').innerText = `: ${info.adminEmail}`;
+    //document.getElementById('adminEmailSm').innerText = `${info.adminEmail}`;
     document.getElementById('adminPhone').innerText = `: ${info.adminPhone}`;
+    //document.getElementById('adminPhoneSm').innerText = `${info.adminPhone}`;
 }
 
-function printTeamTitles(full, short, i){
-    let div = document.getElementById(`team${i}Name`);
+function printTeamTitles(full, short, divId){
+    let div = document.getElementById(`${divId}Name`);
     div.classList.add(short);
     let logo = document.createElement('img');
     logo.src = `./assets/images/logo/teams/${short}.png`
@@ -166,4 +187,16 @@ function printTeamTitles(full, short, i){
     let teamName = document.createTextNode(full);
     div.appendChild(teamName)
     return div
+}
+
+function buyBoxes(){
+    document.getElementById('fullBoard').style.display='none';
+    document.getElementById('getBoxes').style.display='none';
+    document.getElementById('getBoard').style.display='block';  
+}
+
+function seeBoard(){
+    document.getElementById('fullBoard').style.display='block';
+    document.getElementById('getBoxes').style.display='block';
+    document.getElementById('getBoard').style.display='none';  
 }
