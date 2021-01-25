@@ -22,6 +22,8 @@ UPDATE nfl_team SET name='AFC' WHERE id=2;
 UPDATE player SET name_first = 'TheBRAD', name_last='TheKarulas', email='theEmail@email.com', phone='55378008', updated=now()
 WHERE id=6;
 
+/*OWNING*/
+SELECT player_id as player, COUNT(*) AS `squares` FROM square WHERE board_id = 120 GROUP BY player_id;
 
 /*INSERT INTO HISTORY AND DELETE*/
 /*INSERT*/
@@ -38,8 +40,28 @@ WHERE id=12;
 SELECT * FROM player WHERE id=1 AND admin_id=1;
 
 /*SELECT ALL PLAYERS WITH ADMIN ID*/
-SELECT * FROM player WHERE admin_id = 1 ORDER BY id;
+SELECT * FROM player WHERE admin_id = 4501 ORDER BY id;
 
+SELECT player_id as player, COUNT(*) AS `squares` FROM square WHERE board_id = 120 GROUP BY player_id;
+
+/* CALL USED TO GET PLAYER INFO AND SQUARES SELECTED*/
+SELECT s.player_id, COUNT(*) AS `squares`,  p.admin_id, p.name_first, p.name_last, p.email, p.phone
+FROM square s 
+INNER JOIN player p ON p.id = s.player_id
+WHERE p.admin_id = 4501
+GROUP BY s.player_id
+ORDER BY s.player_id;
+
+SELECT p.id, p.admin_id, p.name_first, p.name_last, p.email, p.phone, COUNT(*) AS squares 
+FROM player p
+INNER JOIN square s ON p.id = s.player_id
+WHERE p.admin_id = 4501 AND s.board_id = 120
+ORDER BY p.id;
+
+SELECT p.id, p.admin_id, p.name_first, p.name_last, p.email, p.phone
+FROM player p
+WHERE p.active=1 AND p.admin_id = 4501
+ORDER BY p.id;
 
 /*ONE BOARD BY ADMIN*/
 

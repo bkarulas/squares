@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Pools</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pick a Square </title>
+        <!--<link rel="icon" href="favicon.ico" type="image/ico" />-->
+        <!--<link rel="SHORTCUT ICON" href="favicon.ico" />-->
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/home.css"/>
+        <link rel="stylesheet" href="./assets/css/teams.css"/>
+    </head>
 <body>
-    <section id='siteNav'>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <button type="button" class="btn btn-light"><a class="nav-link active" aria-current="page" href="#">Home</a></button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-light"><a class="nav-link" href="#">Squares</a></button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-light"><a class="nav-link" href="#">Admin</a></button>
-            </li>
-          </ul>
-    </section>
-    <section id="siteTitle">
-        <div class='row'>
-            <div class="img-title">
-                <!--<img src="./assets/images/site/newlogo.png" alt="PAS Logo">-->
+    <section id='siteTitle'>
+            <div class='col-12 mainTitle'>
+                Super Bowl Pools
             </div>
-            <div class='site-title'>
-                <span>Pick A Square</span>
+            <form class='boardForm' action="board.html" method="get">
+                <input class='boardIdTextBox' type="text" id="boardId" placeholder="Enter Board ID" name="boardId">
+                <input class='boardSubBtn' type="submit" value="Submit">
+            </form>
+    </section>
+    <section id="siteSubTitle">
+        <div class='siteSubTitle'>
+            <h2>Home of the Offical Super Bowl LV Squares</h2>
+            <h3>NO account needed to play. Just create the board and play online with your friends</h3>
+            <img class='sblogo' src="./assets/images/logo/teams/Super_Bowl_LV.png">
+            <h4>Sunday Feburay 7th, 2021</h4>
+            <div class='row teams'>
+                <div id='visTeam' class='siteTeams KC'>
+                    <div class='row'>
+                        <div class='teamName'>KANSAS CITY</br>CHIEFS</div>
+                        <div class='teamLogo'>
+                            <img src="./assets/images/logo/teams/KC.png" alt="Kansas City Chiefs">
+                        </div>
+                    </div>
+                </div>
+                <div id='homeTeam' class='siteTeams TB'>
+                    <div class='row'>
+                        <div class='teamLogo'>
+                            <img src="./assets/images/logo/teams/TB.png" alt="Tampa Bay Buccaneers">
+                        </div>
+                        <div class='teamName'>TAMPA BAY</br>BUCCANEERS</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section id="sitePage">
-        <section id='boardView'>
-            <div class='boardLogin'>
-                <form action="board.html" method="get">
-                    <label for="fname">Board ID</label>
-                    <input type="text" id="boardId" name="boardId">
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
-        <div class='container-fluid'>
-            <div class='siteSubTitle'>
-                <h2>Home of the offical 2021 NFL Super Bowl Squres</h2>
-                <img src="./assets/images/logo/teams/Super_Bowl_LV.png">
-                <h4>Sunday Feburay 7th, 2021</h4>
-            </div>
-            <section id='siteHowTo'></section>
+    <section id='siteHowTo'>
+        <div class='siteInfo'>
+            <div class='instructTitle'>HOW TO PLAY</div>
+                <hr>
+                <div class='row instructSubTitleBg'>
+                    <div class='instructSubTitle'>Find your board</div>
+                </div>
+                <div class="row">
+                    <div class='instructText'>In the top right corner of the home page enter in the Board ID sent to you by the admin.</div>
+                    <img class='instructImg enterImg' src="./assets/images/instructions/enterboard.png" alt="find your board">
+                </div>
+                <hr>
+                <div class='row instructSubTitleBg'>
+                    <div class='instructSubTitle'>See what’s available</div>
+                </div>
+                <div class='row'>
+                    <img class='imgFullPage instructImg xlimg' src="./assets/images/instructions/board.png" alt="the board">
+                    <div class='instructText'>Once you’re in the board you can see the available squares.</div>
+                    <img class='instructImg imgMobilePage xlimg' src="./assets/images/instructions/board02.png" alt="the board">
+                </div>
+                <hr>
+                <div class='row instructSubTitleBg'>
+                    <div class='instructSubTitle'>How much</div>
+                </div>
+                <div class='row'>
+                    <div class='instructText'>Beside the board you can find the cost per square, and the payout for each quarter.</div>
+                    <img class = 'instructImg' src="./assets/images/instructions/gameinfo.png" alt="game info">
+                </div>
+                <hr>
+                <div class='row instructSubTitleBg'>
+                    <div class='instructSubTitle'>Buy some squares</div>
+                </div>
+                <div class='row'>
+                    <img class='imgFullPage instructImg' src="./assets/images/instructions/buy03.png" alt="buy squares">
+                    <div class='instructText'>Enter the email address that your invite was sent to. Then pick how many squares you want then choose your numbers.</div>
+                    <img class='instructImg imgMobilePage' src="./assets/images/instructions/buy03.png" alt="buy squares">
+                </div>
         </div>
+    </section>
+    <section id='gameHowTo'>
+        <div class='siteInfo'>
+            <h2>HOW FOOTBALL SQUARES WORK</h2>
+            <h4>The Board</h4>
+            <p>The board playing area is a 10 x 10 grid. At the top of the board is the name of the home team and along the side is the name of the visiting team.</p>
+            <p>Between the playing area and the team names you’ll find 10 empty boxes; this is called the score area. The score area is left empty until the playing area is completely filled.</p>
+            <h4>The Game</h4>
+            <p>Players will purchase empty boxes for the price set by the admin of the board.</p>
+            <p>Once all the boxes have been purchased, each score area will be assigned a random number from 0-9 for both teams.</p>
+            <h4>The Winners</h4>
+            <p>Now the board is complete, all that is left is to find out who the winners are! Winners are determined based on the score at the end of each quarter.</p>
+            <p>The winner is determined by looking at the last number in each of the teams' score, and then matching those numbers on the grid and seeing which square intersects those two numbers.</p>
+            <p>If the score at the end of the game is Home 33, and Visitors 24, then the square on the grid that has Home with number 3, and Visitor number 4, would be the winner.</p>
+        </div>
+    </section>
+    
+    <section id='siteFooter'>
+        <div class='col-12 footer'>The Footer Message</div>
     </section>
     <script src='./assets/js/general.js'></script>
     <script src="./assets/js/script.js"></script>

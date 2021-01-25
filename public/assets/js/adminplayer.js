@@ -62,6 +62,7 @@ function editPlayer(id){
     let phpurl = geturl+"oneplayersinfo&id="+id+"&aid="+adminId;
     $.ajax({url: phpurl, method: "GET"})
     .then((response) => {
+        console.log(JSON.parse(response)[0])
         let colTenDiv = document.createElement('div')
         colTenDiv.className = 'col-10';
         let playerInfoDiv = document.createElement('div')
@@ -110,9 +111,9 @@ function editBox (col, idname, placeHolder){
     return newDisplayBox;
 }
 
-function playerList(displayText){
+function playerList(displayText, colWidth){
     let newDiv = document.createElement('div')
-    newDiv.className = 'col-3';
+    newDiv.className = `col-${colWidth}`;
     newDiv.innerText = displayText;
     return newDiv
 }
@@ -134,10 +135,11 @@ function printAllPlayersByAdmin(allPlayers){
         //each player info
         let playerInfoDiv = document.createElement('div')
         playerInfoDiv.className = 'row';
-            playerInfoDiv.appendChild(playerList(player.nameFirst));
-            playerInfoDiv.appendChild(playerList(player.nameLast));
-            playerInfoDiv.appendChild(playerList(player.email));
-            playerInfoDiv.appendChild(playerList(player.phone));
+            playerInfoDiv.appendChild(playerList(player.nameFirst, 2));
+            playerInfoDiv.appendChild(playerList(player.nameLast, 3));
+            playerInfoDiv.appendChild(playerList(player.email, 3));
+            playerInfoDiv.appendChild(playerList(player.phone, 3));
+            playerInfoDiv.appendChild(playerList(player.squares, 1));
         colTenDiv.appendChild(playerInfoDiv);
         newPlayerDiv.appendChild(colTenDiv);
         //last 2 col for the player info
@@ -233,15 +235,22 @@ function createNewPlayerForm(){
 }
 
 function listOfPlayersTitle (title) {
+    let editCol = 2;
+    let squarDiv = "<div class='col-1'>Squares</div>"
+    if (title == 'Edit A Player'){
+        editCol = 3;
+        squarDiv = '';
+    }
     document.getElementById('listOfPlayersTitle').innerHTML = `
     <div class='row'>${title}</div>
     <div class='row boardTitle'>
             <div class='col-10'>
                 <div class='row'>
-                    <div class='col-3'>First Name</div>
+                    <div class='col-${editCol}'>First Name</div>
                     <div class='col-3'>Last Name</div>
                     <div class='col-3'>Email</div>
                     <div class='col-3'>Phone</div>
+                    ${squarDiv}
                 </div>
             </div>
     </div>`;

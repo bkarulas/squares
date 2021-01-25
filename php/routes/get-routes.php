@@ -3,7 +3,6 @@ include '../../config/connection.php';
 
 $api = $_GET['api'];
 $id = $_GET['id'];
-
 $info = array();
 
 $conn = OpenCon();
@@ -37,7 +36,7 @@ switch ($api) {
         getOnePlayerInfo($conn,$info, $id, $aid);
     break;
     default:
-        echo "Error API";
+        echo "HERE _ Error API";
 }
 
 //GENERAL BOARD INFO
@@ -163,13 +162,19 @@ function getAdminAllBoard($conn,$info, $id){
 }
 
 function getAllPlayersForADMIN($conn,$info, $id){
-    $query = "SELECT * FROM player WHERE active=1 AND admin_id = ".$id." ORDER BY id;";
-    $result = mysqli_query($conn, $query);
+    $query = "SELECT s.player_id, COUNT(*) AS `squares`, p.name_first, p.name_last, p.email, p.phone, p.active, p.created, p.updated
+    FROM square s 
+    INNER JOIN player p ON p.id = s.player_id
+    WHERE p.active = 1 AND p.admin_id = ".$id."
+    GROUP BY s.player_id
+    ORDER BY s.player_id;";
+     $result = mysqli_query($conn, $query);
 
     while ($row = $result->fetch_assoc()) {
         array_push($info,
             array(
-                "id"=>$row['id'],
+                "id"=>$row['player_id'],
+                "squares"=>$row['squares'],
                 "nameFirst"=>$row['name_first'],
                 "nameLast"=>$row['name_last'],
                 "email"=>$row['email'],
@@ -177,11 +182,12 @@ function getAllPlayersForADMIN($conn,$info, $id){
                 "active"=>$row['active'],
                 "created"=>$row['created'],
                 "updated"=>$row['updated']
-            ));
+        ));
     }
     echo json_encode($info);
     CloseCon($conn);
 }
+    
 
 function getOnePlayerInfo($conn,$info, $id, $aid){
     $query = "SELECT * FROM player WHERE id = ".$id." AND admin_id = ".$aid.";";

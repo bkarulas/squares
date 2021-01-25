@@ -6,3 +6,66 @@
 .highlight{
     background-color: lightyellow;
 }
+
+#siteTitle, #siteFooter{
+    background-color: #17252A;
+    display: flex;
+    flex-wrap: wrap;
+    color: #86C232;
+    font-family: 'Goldman', cursive;
+
+}
+ #siteTitle{
+    font-size: 6rem;
+    margin-bottom: 40px;
+    padding: 40px 0px 40px 0px;
+ }
+
+ #siteFooter{
+    height: 60px;
+    margin-top: 20px;
+}
+
+.mainTitle, .footer{
+    text-align: center;
+    margin: auto;
+}
+
+
+
+
+
+
+/*MEDIA STYLE*/
+
+@media screen and (max-width: 1880px){
+    
+}
+
+@media screen and (max-width: 1580px){
+
+}
+
+@media screen and (max-width: 1380px){
+    #siteTitle{font-size: 4.9rem;}  
+}
+
+@media screen and (max-width: 1030px){
+    #siteTitle{
+        font-size: 4.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 830px){
+    #siteTitle{
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 530px){
+    #siteTitle{font-size: 2.2rem;}
+
+}
