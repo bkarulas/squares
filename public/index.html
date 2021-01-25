@@ -17,9 +17,22 @@
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/home.css"/>
         <link rel="stylesheet" href="./assets/css/teams.css"/>
+        <link rel='stylesheet' href="./assets/css/nav.css"/>
     </head>
 <body>
-    <section id='siteTitle'>
+    <section id='nav'>
+        <nav class="topnav" id="myTopnav">
+            <div>
+                <a href='#home'>HOME</a>
+                <a href='#siteHowTo'>HOW TO PLAY</a>
+                <a href='#gameHowTo'>HOW SQUARES WORK</a>
+                <!--<a href='#faq'>F.A.Q.</a>-->
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" id="myMenuFunction">&#9776;</a>
+            </div>
+        </nav>
+    </section>
+    <section id='home'>
+        <div id='siteTitle'>
             <div class='col-12 mainTitle'>
                 Super Bowl Pools
             </div>
@@ -27,6 +40,7 @@
                 <input class='boardIdTextBox' type="text" id="boardId" placeholder="Enter Board ID" name="boardId">
                 <input class='boardSubBtn' type="submit" value="Submit">
             </form>
+        </div>
     </section>
     <section id="siteSubTitle">
         <div class='siteSubTitle'>
@@ -112,6 +126,7 @@
     <section id='siteFooter'>
         <div class='col-12 footer'>The Footer Message</div>
     </section>
+    <script src="./assets/js/nav.js"></script>
     <script src='./assets/js/general.js'></script>
     <script src="./assets/js/script.js"></script>
 </body>

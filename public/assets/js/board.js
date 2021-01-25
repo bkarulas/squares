@@ -1,5 +1,8 @@
-let pageURL = window.location.href;
+
 let boardId = getUrlVar(pageURL, 'boardId');
+
+
+
 
 getTheBoardInfo(boardId);
 getTakenSquares(boardId);
@@ -200,3 +203,4 @@ function seeBoard(){
     document.getElementById('getBoxes').style.display='block';
     document.getElementById('getBoard').style.display='none';  
 }
+

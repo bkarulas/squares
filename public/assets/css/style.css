@@ -17,7 +17,8 @@
 }
  #siteTitle{
     font-size: 6rem;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     padding: 40px 0px 40px 0px;
  }
 
@@ -26,7 +27,13 @@
     margin-top: 20px;
 }
 
-.mainTitle, .footer{
+.mainTitle{
+    font-size: 6rem;
+}
+.mainSubTitle{
+    font-size: 4rem;
+}
+.mainTitle, .mainSubTitle, .footer{
     text-align: center;
     margin: auto;
 }
@@ -43,29 +50,29 @@
 }
 
 @media screen and (max-width: 1580px){
-
+    .mainTitle{font-size: 5rem;}
+    .mainSubTitle{font-size:3rem;}
 }
 
 @media screen and (max-width: 1380px){
-    #siteTitle{font-size: 4.9rem;}  
+    .mainTitle{font-size: 4.5rem;}
+    .mainSubTitle{font-size:2.5rem;}
 }
 
 @media screen and (max-width: 1030px){
-    #siteTitle{
-        font-size: 4.5rem;
-        margin-bottom: 20px;
-    }
+    #siteTitle{margin-bottom: 20px;}
+    .mainTitle{font-size: 4.2rem;}
+    .mainSubTitle{font-size:2.2rem;}
 }
 
 @media screen and (max-width: 830px){
-    #siteTitle{
-        font-size: 3.2rem;
-        margin-bottom: 10px;
+    .mainTitle{font-size: 3rem;}
+    .mainSubTitle{
+        font-size:2rem;
+        margin-bottom: 15px;
     }
-
 }
 
 @media screen and (max-width: 530px){
-    #siteTitle{font-size: 2.2rem;}
 
 }

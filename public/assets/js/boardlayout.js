@@ -1,3 +1,10 @@
+let pageURL = window.location.href;
+let emailValue = '';
+getUrlVar(pageURL, 'user')? emailValue = `value = '${getUrlVar(pageURL, 'user')}'`:''
+// let emailValue = getUrlVar(pageURL, 'user');
+// (emailValue == null) ? emailVaule='Your Email Address':'';
+// console.log (emailValue);
+
 //THE BOARD
 let fullBoardSec = document.getElementById('fullBoard');
 fullBoardSec.className = 'theFullBoard'
@@ -206,7 +213,7 @@ gameinfoLg.innerHTML = `
     </section>
     <section id='box-info'>
         <div class='row infoMainTitle'>BUY BOXES</div>
-        <input type=text class='inputemail highlight' id='useremail' placeholder="Your email address" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' required>
+        <input type=text class='inputemail highlight' id='useremail' ${emailValue} placeholder="Your email address" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' required>
         <div id="inputemailmessage" class='inputInfo'>The email address must be the same one the invite got sent to</div>
         <div class='infoTitle'>How many boxes?</div>
         <div class='row'>
